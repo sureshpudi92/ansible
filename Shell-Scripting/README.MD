@@ -1,1 +1,1 @@
-"This is to learn shell scripting learing"
+"This is to learn shell scripting "
