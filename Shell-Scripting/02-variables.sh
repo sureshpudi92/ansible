@@ -1,7 +1,7 @@
 #!/bin/bash
-#Arithmetic expressions
+#Use $(( expression )) for calculations:
 
-a=10
-b=15
+a=$1
+b=$2
 sum=$((a+b))
 echo "sum of a+b is: $sum"
