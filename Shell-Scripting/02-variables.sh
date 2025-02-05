@@ -1,7 +1,7 @@
 #!/bin/bash
 #Use $(( expression )) for calculations:
 
-a=$1
-b=$2
-sum=$((a+b))
+number1=$1
+number2=$2
+sum=$((number1+number1))
 echo "sum of a+b is: $sum"
