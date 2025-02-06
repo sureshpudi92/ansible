@@ -35,7 +35,7 @@ fi
 yum install mysql -y >>$LOGFILE
 VALIDATE $?  "Installing MySql"
 
-yum install postfix -y >>$LOGFILE
+yum install postfixx -y >>$LOGFILE
 VALIDATE $? "Installing postfix"
 
 # $1 ---Exit status of the previous command ($?)
