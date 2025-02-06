@@ -3,15 +3,20 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
+#colors
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
 
 #this function should validate previous command status
 VALIDATE(){
 if [ $1 -ne 0 ]
 then
-        echo "$2  failure"
+        echo -e"$2 ..... $R failure $N"
         exit 1
 else
-echo "$2 success"
+echo -e"$2 .....$G success $N"
 fi
 
 }
