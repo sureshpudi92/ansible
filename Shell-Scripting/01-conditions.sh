@@ -1,3 +1,4 @@
+#!/bin/bash
 # check if number is greater than 10 or not
 
 NUMBER=$1
