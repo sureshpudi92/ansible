@@ -23,9 +23,9 @@ echo "you are root user"
 fi
 
 # our responsibility whether installation success or not
-yum install mysql -y "Installing MySql"
-VALIDATE $?
+yum install mysql -y 
+VALIDATE $?  "Installing MySql"
 
-yum install postfix -y "Installing postfix"
-VALIDATE $?
+yum install postfix -y 
+VALIDATE $? "Installing postfix"
 
