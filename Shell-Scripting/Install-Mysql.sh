@@ -9,4 +9,12 @@ else
 echo "you are root user"
 fi
 
+# our responsibility whether installation success or not
 yum install mysql -y
+
+if [ $? -ne 0]
+then
+echo "Installation of mysql is not success"
+else
+echo "Installation of mysql is success"
+fi
