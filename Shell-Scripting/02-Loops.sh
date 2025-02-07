@@ -14,6 +14,8 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then 
 echo "Error : Please run with root access"
+exit 1
+fi
 
 for i in $@
 do
