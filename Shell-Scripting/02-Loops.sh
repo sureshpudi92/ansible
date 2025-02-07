@@ -14,6 +14,11 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGDIR=/home/centos/shell-script.logs/$SCRIPT_NAME-$DATE.log
 
+#colors
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
 if [ $USERID -ne 0 ]
 then 
 echo "Error : Please run with root access"
@@ -23,10 +28,10 @@ VALIDATE(){
 
      if [ $1 -ne 0 ]
      then
-     echo "$i installating $2.... Failure"
+     echo "$i installating $2.... $R Failure $N"
      exit 1
      else
-     echo "$i Installation $2..... Success"
+     echo "$i Installation $2..... $G Success $N"
      fi
 }
 
