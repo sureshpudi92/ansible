@@ -10,15 +10,36 @@
 # if installed just print package is alredy installed, it should not run install command
 
 USERID=$(id -u)
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGDIR=/home/centos/shell-script.logs/$SCRIPT_NAME-$DATE.log
 
 if [ $USERID -ne 0 ]
 then 
 echo "Error : Please run with root access"
 exit 1
 fi
+validate(){
+
+     if [ $1 -ne 0 ]
+     then
+     echo "$i installating $2.... Failure"
+     else
+     echo "$i Installation $2..... Success"
+     fi
+}
 
 for i in $@
 do
-     yum install $i -y
+   yum list installed $i
+   if [ $? -ne 0 ]
+   then
+   echo "$i not installed,Lets Instal.."
+     yum install $i -y &>>$LOGFILE
+     VALIDATE $? "$i"
+     else
+     echo " $i Already installed"
 done
+
+VALIDATE()
 
