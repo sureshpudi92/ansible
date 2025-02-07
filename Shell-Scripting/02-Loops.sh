@@ -39,6 +39,7 @@ do
      VALIDATE $? "$i"
      else
      echo " $i Already installed"
+     fi
 done
 
 VALIDATE()
