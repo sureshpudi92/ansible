@@ -19,7 +19,7 @@ then
 echo "Error : Please run with root access"
 exit 1
 fi
-validate(){
+VALIDATE(){
 
      if [ $1 -ne 0 ]
      then
@@ -35,12 +35,12 @@ do
    if [ $? -ne 0 ]
    then
    echo "$i not installed,Lets Instal.."
-     yum install $i -y &>>$LOGFILE
+     yum install $i -y &>>$LOGDIR
      VALIDATE $? "$i"
      else
      echo " $i Already installed"
      fi
 done
 
-VALIDATE()
+
 
