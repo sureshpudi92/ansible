@@ -24,6 +24,7 @@ VALIDATE(){
      if [ $1 -ne 0 ]
      then
      echo "$i installating $2.... Failure"
+     exit 1
      else
      echo "$i Installation $2..... Success"
      fi
