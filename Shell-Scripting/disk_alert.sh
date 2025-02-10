@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THRESHOLD=80
+THRESHOLD=15
 EMAIL="sureshpudi1992@gmail.com"
 HOSTNAME=$(hostname)
 
