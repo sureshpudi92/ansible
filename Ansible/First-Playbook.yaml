@@ -1,7 +1,7 @@
 ---
 - name: Install and Start nginx
   hosts: all
-  become: root
+  become: yes
 
   tasks:
   - name: Install nginx
@@ -11,4 +11,4 @@
   - name: Start nginx
     service:
        name: nginx
-       state: started
+       state: yes
